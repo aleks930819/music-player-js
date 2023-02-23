@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: inherit;
+}
+
+
+body {
+    background-color: #515567;
+    font-family: 'Noto Serif', serif;
+    font-size: 1.6rem;
+    color: #E7ECEF;
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.player {
+    max-width: 500px;
+    height: 400px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 15rem auto;
+
+
+
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.player__controls {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+
+}
+
+.player__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.player__info__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.player__info__img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: rotate 10s linear infinite;
+}
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.player__info__details__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.player__info__details__artist {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
+.player__controls i {
+    cursor: pointer;
+}
+
+.player__volume__controls__box {
+    display: flex;
+    gap: 2rem;
+}
+
+.player__progress__bar {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+
+.player__volume {
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+
+}
+
+.active {
+    color: #0075ff;
+}
+
+.player__song__picker {
+    position: absolute;
+    top: 3rem;
+    left: 4rem;
+    cursor: pointer;
+}
+
+
+
+.player__song__picker__btn {
+    font-size: 2rem;
+}
+
+.player__song__picker__music-list {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+
+    background: rgba(0, 0, 0, 0.9);
+
+
+    color: white;
+    width: 500px;
+    height: 200px;
+    z-index: 1000;
+    border-radius: .2rem;
+    position: absolute;
+    top: 16.5rem;
+    border-radius: 1rem;
+    left: -4rem;
+    overflow-y: scroll;
+
+}
+
+.player__song__picker__music-list p {
+    padding: 1rem;
+    cursor: pointer;
+
+}
+
+.hidden {
+    display: none;
+
+}
+
+.visible {
+    display: block;
+}
+
+.song-picker__list__item__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(226, 225, 239);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: rgb(90, 89, 146);
+
+}

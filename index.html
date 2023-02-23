@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <title>Music Player JS</title>
+</head>
+
+<body>
+    <div class="player">
+        <div class="player__song__picker">
+            <div class="player__song__picker__btn">
+
+                <i class="fas fa-list"></i>
+
+                <div class="player__song__picker__music-list hidden">
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="player__info">
+            <div class="player__info__img">
+                <img src="https://images.unsplash.com/photo-1500099817043-86d46000d58f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                    alt="Album Cover" class="album__cover">
+            </div>
+            <div class="player__info__details">
+                <div class="player__info__details__title"></div>
+                <div class="player__info__details__artist"></div>
+            </div>
+        </div>
+
+        <div class="player__progress">
+            <div class="player__progress__bar">
+                <div class="player__progress__bar__curent-time">00:00</div>
+                <input type="range" min="0" max="100" value="0" class="player__progress__bar__input" onchange="goTo()">
+                <div class="player__progress__bar__duration">00:00</div>
+            </div>
+        </div>
+
+        <div class="player__volume__controls__box">
+
+
+            <div class="player__volume">
+
+
+
+                <div class="player__volume__icon">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="player__volume__bar">
+                    <input type="range" min="0" max="100" value="100" class="player__volume__bar__input"
+                        onchange="setVolume()">
+                </div>
+
+
+
+            </div>
+
+            <div class="player__controls">
+                <div class="player__controls__btn player__controls__btn--shuffle">
+                    <i class="fas fa-random"></i>
+                </div>
+                <div class="player__controls__btn player__controls__btn--prev">
+                    <i class="fas fa-backward"></i>
+                </div>
+                <div class="player__controls__btn player__controls__btn--play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <div class="player__controls__btn player__controls__btn--next">
+                    <i class="fas fa-forward"></i>
+                </div>
+                <div class="player__controls__btn player__controls__btn--repeat">
+                    <i class="fas fa-redo"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+</body>
+
+<!-- <script src="app.js"></script> -->
+
+</html>
